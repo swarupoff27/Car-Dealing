@@ -1,0 +1,24 @@
+footer {
+    padding: 35px 0;
+    background-color: #342c2c;
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+
+        >a {
+            font-size: 24px;
+            font-weight: 700;
+            color: white;
+            letter-spacing: 0.06px;
+        }
+    }
+
+    nav a {
+        letter-spacing: 0.05px;
+        color: white;
+        margin-left: 20px;
+
+    }
+}

@@ -1,0 +1,40 @@
+@mixin input($width, $height) {
+    width: $width;
+    height: $height;
+    border: none;
+    padding: 0 24px;
+    float: left;
+
+    color: $input;
+    font-size: 13px;
+    font-weight: $reg;
+    letter-spacing: 0.05px;
+
+    &::placeholder{
+        color: $input;
+        font-size: 13px;
+        font-family: 'Poppins', sans-serif;
+        font-weight: $reg;
+        letter-spacing: 0.05px;
+    }
+
+    &:focus {
+        outline: none !important;
+    }
+
+    &:focus::placeholder {
+        visibility: hidden;
+    }
+}
+
+@mixin grid($col) {
+    display: grid;
+    grid-template-columns: repeat($col, 1fr);
+    grid-gap: 32px 26px;
+    margin-top: 62px;
+
+    a:hover {
+        transform: scale(1.02);
+        transition: all ease-in-out 0.2s;
+    }
+}

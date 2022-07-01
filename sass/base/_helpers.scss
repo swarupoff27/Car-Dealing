@@ -1,0 +1,40 @@
+
+.container {
+    max-width: 1260px;
+    margin: 0 auto;
+    padding: 0 20px;
+    /* outline: 2px solid red; */
+}
+
+.rb {
+    border: 2px solid red;
+}
+
+.bb {
+    border: 2px solid blue;
+}
+
+.gb {
+    border: 2px solid rgb(1, 255, 1);
+}
+
+.ro {
+    outline: 2px solid red;
+}
+
+.bo {
+    outline: 2px solid blue;
+}
+
+.go {
+    outline: 2px solid rgb(1, 255, 1);
+}
+
+.clearfix {
+    display: flow-root;
+}
+
+main {
+    text-align: center;
+}
+

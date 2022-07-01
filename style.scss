@@ -1,75 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+@import "sass/abstracts/variables";
+@import 'sass/abstracts/mixins';
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+@import 'sass/base/reset';
+@import 'sass/base/helpers';
+@import 'sass/base/fonts';
+@import 'sass/base/base';
+@import 'sass/base/typography';
 
-
-
-html,
-body {
-    width: 100%;
-    font-family: 'Poppins', sans-serif;
-    scroll-behavior: smooth;
-}
-
-a {
-    text-decoration: none;
-}
-
-.container {
-    max-width: 1260px;
-    margin: 0 auto;
-    padding: 0;
-    /* outline: 2px solid red; */
-}
-
-.rb {
-    border: 2px solid red;
-}
-
-.bb {
-    border: 2px solid blue;
-}
-
-.gb {
-    border: 2px solid rgb(1, 255, 1);
-}
-
-.ro {
-    outline: 2px solid red;
-}
-
-.bo {
-    outline: 2px solid blue;
-}
-
-.go {
-    outline: 2px solid rgb(1, 255, 1);
-}
-
-strong {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 700;
-}
-
-.clearfix {
-    display: flow-root;
-}
+@import 'sass/layout/header';
+@import 'sass/layout/footer';
 
 
-header {
-    width: 100%;
-    position: absolute;
-    z-index: 1;
-    margin-top: 40px;
-}
+@import 'sass/components/buttons';
+// @import 'sass/components/models';
 
-main {
-    text-align: center;
-}
 
 /* hero *****************************************************/
 
@@ -78,7 +22,7 @@ main {
     background-size: cover;
     width: 100%;
     height: 100vh;
-    min-height: 650px;
+    min-height:600px;
 
     .hero__container {
         height: auto;
@@ -86,86 +30,31 @@ main {
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: center;
         position: absolute;
-        // top: 120px;
-        top: 20%;
+        margin-top: 100px;
+        top: 0%;
         left: 50%;
         transform: translate(-50%, 0px);
 
         h1 {
-            font-size: 54px;
-            font-weight: 600;
-            color: white;
+            @include headings(54px,$s-bold,white,0);
         }
 
         p {
-            display: inline-block;
-            width: 655px;
-            font-size: 20px;
-            font-weight: 500;
-            letter-spacing: 1.12px;
-            color: white;
-            margin-top: 4px;
+            @include paragraphs(inline-block,655px,20px,$med,1.12px,white,4px);
         }
 
         form {
             margin-top: 22px;
-
             :nth-child(1) {
-                width: 307px;
-                height: 51px;
-                border: none;
-                padding: 0 24px;
-                float: left;
-
-                color: #646464;
-                font-size: 13px;
-                font-weight: 400;
-                letter-spacing: 0.05px;
+                @include input(307px,51px);
             }
-
             :nth-child(2) {
-                width: 142px;
-                height: 51px;
-                border: none;
-                padding: 0 24px;
-                border-left: 1px solid #9797974A;
-                float: left;
-                color: #646464;
-                font-size: 13px;
-                font-weight: 400;
-                letter-spacing: 0.05px;
+                @include input(142px,51px);
+                border-left:1px solid $border;
             }
-
-            input::placeholder {
-                color: #646464;
-                font-size: 13px;
-                font-family: 'Poppins', sans-serif;
-                font-weight: 400;
-                letter-spacing: 0.05px;
-            }
-
-
-            input:focus {
-                outline: none !important;
-            }
-
-            input:focus::placeholder {
-                visibility: hidden;
-            }
-
             button {
-                font-size: 13px;
-                color: white;
-                background-color: #342c2c;
-                width: 142px;
-                border: none;
-                padding: 18px 35px;
-
-                &:hover {
-                    cursor: pointer;
-                }
+                @include btn-dark;
             }
 
         }
@@ -186,58 +75,32 @@ main {
     padding: 80px 0 80px 0;
 
     h2 {
-        font-size: 30px;
-        font-weight: 600;
-        letter-spacing: 0.06px;
-        color: #000000;
+        @include headings(30px,$s-bold,#000000,0.06px);
+        // text-shadow: 0px 10px 30px rgba(0, 0, 0, 0.15);
     }
 
     &>p {
-        font-size: 20px;
-        margin-top: 15px;
-        color: #696969;
+        @include paragraphs(block,auto,20px,$reg,0,$sub-heading,15px);
     }
 
     .container {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        grid-gap: 32px 26px;
-        margin-top: 62px;
-
-        a:hover {
-            transform: scale(1.02);
-            transition: all ease-in-out 0.2s;
-        }
-
-
+        @include grid(4);
 
         p {
-            font-size: 24px;
-            font-weight: 600;
-            letter-spacing: 0.05px;
-            color: #000000;
+            @include paragraphs(block,auto,24px,$s-bold,0.05px,$heading,7px);
         }
 
     }
 
     img {
-        background-color: rgba(227, 227, 227, 0.73);
+        background-color: $cars-bg;
         border-radius: 4px;
         padding: 10px 27px;
+        width: 100%;
     }
 
     .btn {
-        display: inline-block;
-        font-size: 15px;
-        font-weight: 500;
-        letter-spacing: 0.06px;
-        color: white;
-        background-color: #f5a623;
-        padding: 20px 40px;
-        margin-top: 50px;
-        -webkit-box-shadow: 0px 20px 40px 0px rgba(0, 0, 0, 0.14);
-        -moz-box-shadow: 0px 20px 40px 0px rgba(0, 0, 0, 0.14);
-        box-shadow: 0px 20px 40px 0px rgba(0, 0, 0, 0.14);
+        @include btn-light;
     }
 }
 
@@ -252,19 +115,11 @@ main {
     padding-bottom: 80px;
 
     h3 {
-        font-size: 30px;
-        font-weight: 600;
-        letter-spacing: 0.06px;
-        color: #000000;
+        @include headings(30px,$s-bold,$heading,0.06px);
     }
 
     &>p {
-        font-size: 20px;
-        margin-top: 15px;
-        color: #696969;
-        // -webkit-box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.02);
-        // -moz-box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.02);
-        // box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.02);
+        @include paragraphs(block,auto,20px,$reg,0,$sub-heading,15px);
     }
 
 
@@ -275,10 +130,7 @@ main {
         margin-top: 50px;
 
         p {
-            font-size: 24px;
-            font-weight: 700;
-            letter-spacing: 0.05px;
-            color: white;
+            @include paragraphs(block,auto,24px,$bold,0.05px,white,auto);
             position: absolute;
             left: 0;
             right: 0;
@@ -312,17 +164,7 @@ main {
     }
 
     .btn {
-        display: inline-block;
-        font-size: 15px;
-        font-weight: 500;
-        letter-spacing: 0.06px;
-        color: white;
-        background-color: #f5a623;
-        padding: 20px 40px;
-        margin-top: 50px;
-        -webkit-box-shadow: 0px 20px 40px 0px rgba(0, 0, 0, 0.14);
-        -moz-box-shadow: 0px 20px 40px 0px rgba(0, 0, 0, 0.14);
-        box-shadow: 0px 20px 40px 0px rgba(0, 0, 0, 0.14);
+       @include btn-light;
     }
 }
 
@@ -337,20 +179,11 @@ main {
     padding: 70px 0 80px 0;
 
     h4 {
-        font-size: 40px;
-        font-weight: 600;
-        color: white;
-        letter-spacing: 0.12px;
-        // -webkit-box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.13);
-        // -moz-box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.13);
-        // box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.13);
+        @include headings(40px,$s-bold,white,0.12);
     }
 
     p {
-        font-size: 20px;
-        font-weight: 500;
-        color: white;
-        margin-top: 15px;
+        @include paragraphs(block,auto,20px,$med,0,white,15px);
     }
 
     form {
@@ -358,89 +191,16 @@ main {
         margin: 41px auto 0 auto;
 
         input {
-            width: 449px;
-            height: 51px;
-            border: none;
-            padding: 0 24px;
-            float: left;
-
-
-            color: #646464;
-            font-size: 13px;
-            font-weight: 400;
-            letter-spacing: 0.05px;
-        }
-
-        input::placeholder {
-            color: #646464;
-            font-size: 13px;
-            font-family: 'Poppins', sans-serif;
-            font-weight: 400;
-            letter-spacing: 0.05px;
-        }
-
-
-        input:focus {
-            outline: none !important;
-        }
-
-        input:focus::placeholder {
-            visibility: hidden;
+            @include input(449px,51px);
         }
 
         button {
-            font-size: 13px;
-            color: white;
-            background-color: #342c2c;
-            width: 142px;
-            border: none;
-            padding: 18px 35px;
-
-
-            &:hover {
-                cursor: pointer;
-            }
+            @include btn-dark;
         }
     }
 }
 
 /* message *****************************************************/
-
-
-
-
-/* footer *****************************************************/
-footer {
-    padding: 35px 0;
-    background-color: #342c2c;
-
-
-
-    .container {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        width: 100%;
-
-        >a {
-            font-size: 24px;
-            font-weight: 700;
-            color: white;
-            letter-spacing: 0.06px;
-        }
-    }
-
-
-
-    nav a {
-        letter-spacing: 0.05px;
-        color: white;
-        margin-left: 20px;
-
-    }
-}
-
-/* footer *****************************************************/
 
 
 
@@ -517,19 +277,24 @@ footer {
         background: url(images/yellow-bg.png) no-repeat center;
         background-size: cover;
         height: 100vh;
-        min-height: 110vh;
 
         .hero__container {
+            height: 93%;
+            justify-content: space-evenly;
+
+
             h1 {
                 font-size: 30px;
                 width: 90%;
             }
 
             p {
+                margin-top: 0;
                 width: 90%;
             }
 
             form {
+                margin-top:0;
                 width: 95%;
                 display: flex;
                 flex-direction: column;
@@ -546,7 +311,7 @@ footer {
                     font-size: 13px;
                     height: 40px;
                     border-left: none;
-                    border-top: 1px solid #9797974A;
+                    border-top: 1px solid $border;
 
                 }
 
@@ -561,10 +326,9 @@ footer {
             }
 
             img {
-                margin-top: 5vh;
+                margin-top: 30px;
                 display: inline-block;
-                width: 58%;
-                height: auto;
+                width: 70%;   
             }
 
         }
@@ -605,11 +369,11 @@ footer {
                 font-size: 16px;
             }
 
-            img {
-                margin-top: 5vh;
-                width: 83%;
+            img{
+                margin-top:0;
             }
 
+           
         }
     }
 
