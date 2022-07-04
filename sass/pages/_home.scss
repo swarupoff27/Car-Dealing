@@ -1,0 +1,246 @@
+.hero {
+    background: url(images/hero-bg.png) no-repeat center;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    min-height:600px;
+
+    .hero__container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        margin-top: 100px;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, 0px);
+
+        form {
+            margin-top: 22px;
+            :nth-child(1) {
+                @include input(307px,51px);
+            }
+            :nth-child(2) {
+                @include input(142px,51px);
+                border-left:1px solid $secondary-color-5;
+            }
+
+        }
+
+        img {
+            display: none;
+        }
+    }
+
+}
+/* hero *****************************************************/
+
+
+
+
+/* deals *****************************************************/
+.deals {
+    padding: 80px 0 80px 0;
+    .container {
+        @include grid(4);
+    }
+}
+/* deals *****************************************************/
+
+
+
+
+/* tips *****************************************************/
+.tips {
+    padding-bottom: 80px;
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 50px;
+    }
+
+    .tip-1 {
+        @include tips('images/rectangle-1.png');
+    }
+
+    .tip-2 {
+        @include tips('images/rectangle-2.png');
+    }
+
+    .tip-3 {
+        @include tips('images/rectangle-3.png');
+    }
+
+}
+/* tips *****************************************************/
+
+
+
+/* message *****************************************************/
+.message {
+    background: url(images/yellow-bg.png) no-repeat center;
+    background-size: cover;
+    padding: 70px 0 80px 0;
+    display: flex;
+    flex-direction: column;
+
+    form {
+        margin: 41px auto 0 auto;
+        input {
+            @include input(449px,51px);
+        }
+    }
+}
+/* message *****************************************************/
+
+
+
+
+/* media queries *********************************************/
+
+@media screen and (max-width: 1330px) {
+
+    .deals {
+        .container {
+            grid-template-columns: 1fr 1fr;
+
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+
+    .tips {
+        .container {
+
+            p {
+                font-size: 20px;
+            }
+
+            .tip-1,
+            .tip-2,
+            .tip-3 {
+                background-size: cover;
+            }
+
+            .tip-2 {
+                margin: 15px;
+            }
+
+        }
+
+    }
+
+
+    footer {
+        .container {
+            padding: 0 30px;
+        }
+
+    }
+}
+
+
+@media screen and (max-width:1100px) {
+    .tips {
+        .container {
+            flex-direction: column;
+        }
+    }
+}
+
+
+
+@media screen and (max-width: 820px) {
+    .hero {
+        background: url(images/yellow-bg.png) no-repeat center;
+        background-size: cover;
+        height: 100vh;
+
+        .hero__container {
+            height: calc(100% - 100px);
+            justify-content: space-between;
+
+            form {
+                margin-top: 0;
+                width: 100%;
+                padding: 0 20px;
+                display: flex;
+                flex-direction: column;
+
+                :nth-child(1) {
+                    width: 100%;
+                    font-size: 13px;
+                    height: 40px;
+
+                }
+
+                :nth-child(2) {
+                    width: 100%;
+                    font-size: 13px;
+                    height: 40px;
+                    border-left: none;
+                    border-top: 1px solid $secondary-color-5;
+
+                }
+
+            }
+
+            img {
+                display: inline-block;
+                width: 70vw;
+                margin-top: 5%;  
+            }
+
+        }
+    }
+
+    .message {
+        form {
+            display: flex;
+            flex-direction: column;
+
+            input {
+                width: 100%;
+                height: 40px;
+            }
+
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    .hero {
+        .hero__container {
+            justify-content: space-evenly;
+        }
+    }
+
+
+    .deals {
+        .container {
+            grid-template-columns: 1fr;
+        }
+    }
+
+
+    .tips {
+        .tip-1,
+        .tip-2,
+        .tip-3 {
+            width: 100%;
+        }
+    }
+
+}
+
+
+
+
+
+/* media queries *********************************************/

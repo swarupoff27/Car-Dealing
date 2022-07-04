@@ -13,12 +13,33 @@ footer {
             color: white;
             letter-spacing: 0.06px;
         }
+
+        nav a {
+            letter-spacing: 0.05px;
+            color: white;
+            margin-left: 20px;
+        }
     }
 
-    nav a {
-        letter-spacing: 0.05px;
-        color: white;
-        margin-left: 20px;
+    
 
+    @media screen and (max-width: 600px) {
+
+        .container {
+            flex-direction: column;
+
+            nav {
+                width: 95%;
+                display: flex;
+                justify-content: space-between;
+                margin-top: 30px;
+
+                a {
+                    margin: 0;
+                    font-size: 13px;
+                }
+           
+            }
+        }
     }
 }

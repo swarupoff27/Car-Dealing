@@ -1,0 +1,28 @@
+@mixin input($width, $height) {
+    width: $width;
+    height: $height;
+    border: none;
+    padding: 0 24px;
+    float: left;
+
+    color: $secondary-color-4;
+    font-size: 13px;
+    font-weight: $reg;
+    letter-spacing: 0.05px;
+
+    &::placeholder{
+        color: $secondary-color-4;
+        font-size: 13px;
+        font-family: 'Poppins', sans-serif;
+        font-weight: $reg;
+        letter-spacing: 0.05px;
+    }
+
+    &:focus {
+        outline: none !important;
+    }
+
+    &:focus::placeholder {
+        visibility: hidden;
+    }
+}

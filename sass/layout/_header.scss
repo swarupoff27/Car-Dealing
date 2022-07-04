@@ -3,4 +3,16 @@ header {
     position: absolute;
     z-index: 1;
     margin-top: 40px;
+
+    a {
+        display: flex;
+        align-items: center;
+
+    }
+
+    @media screen and (max-width:820px) {
+        a {
+            justify-content: center;
+        }
+    }
 }
