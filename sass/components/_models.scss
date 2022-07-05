@@ -4,3 +4,7 @@
     padding: 10px 27px;
     width: 100%;
 }
+
+.car__name {
+    @include paragraphs(auto, 24px, $s-bold, 0.05px, $secondary-color-2, 7px);
+}

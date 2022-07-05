@@ -3,16 +3,17 @@
     font-weight: $font-weight;
     color: $color;
     letter-spacing: $letter-spacing;
+    padding:0 20px;
 }
 
-@mixin paragraphs($display,$width,$font-size,$font-weight,$letter-spacing,$color,$margin-top) {
-    display: $display;
+@mixin paragraphs($width,$font-size,$font-weight,$letter-spacing,$color,$margin-top) {
     width: $width;
     font-size: $font-size;
     font-weight: $font-weight;
     letter-spacing: $letter-spacing;
     color: $color;
     margin-top: $margin-top;
+    padding: 0 20px;
 }
 
 a {

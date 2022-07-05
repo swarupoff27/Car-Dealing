@@ -5,11 +5,6 @@
   box-sizing: border-box;
 }
 
-strong {
-  font-family: "Poppins", sans-serif;
-  font-weight: 700;
-}
-
 .container {
   max-width: 1260px;
   margin: 0 auto;
@@ -49,6 +44,10 @@ main {
   text-align: center;
 }
 
+form {
+  width: 591px;
+}
+
 a {
   text-decoration: none;
 }
@@ -60,11 +59,17 @@ body {
   scroll-behavior: smooth;
 }
 
+strong {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+}
+
 h1 {
   font-size: 54px;
   font-weight: 600;
   color: white;
   letter-spacing: 0;
+  padding: 0 20px;
 }
 @media screen and (max-width: 820px) {
   h1 {
@@ -74,7 +79,7 @@ h1 {
 }
 @media screen and (max-width: 600px) {
   h1 {
-    font-size: 26px;
+    font-size: 28px;
   }
 }
 
@@ -83,10 +88,11 @@ h2 {
   font-weight: 600;
   color: #000000;
   letter-spacing: 0.06px;
+  padding: 0 20px;
 }
 @media screen and (max-width: 600px) {
   h2 {
-    font-size: 28px;
+    font-size: 26px;
     margin: 0 auto;
     width: 90%;
   }
@@ -97,10 +103,11 @@ h3 {
   font-weight: 600;
   color: #000000;
   letter-spacing: 0.06px;
+  padding: 0 20px;
 }
 @media screen and (max-width: 600px) {
   h3 {
-    font-size: 28px;
+    font-size: 26px;
     margin: 0 auto;
     width: 90%;
   }
@@ -111,112 +118,49 @@ h4 {
   font-weight: 600;
   color: white;
   letter-spacing: 0.12;
+  padding: 0 20px;
 }
 @media screen and (max-width: 600px) {
-  h4 h4 {
-    font-size: 30px;
+  h4 {
+    font-size: 26px;
   }
 }
 
-.hero p {
-  display: inline-block;
+.subtitle-1 {
   width: 655px;
   font-size: 20px;
   font-weight: 500;
   letter-spacing: 1.12px;
   color: white;
   margin-top: 4px;
+  padding: 0 20px;
 }
 @media screen and (max-width: 820px) {
-  .hero p {
+  .subtitle-1 {
     font-size: 18px;
-    width: 90%;
+    width: 100%;
   }
 }
 @media screen and (max-width: 600px) {
-  .hero p {
-    font-size: 16px;
-  }
-}
-
-.deals > p {
-  display: block;
-  width: auto;
-  font-size: 20px;
-  font-weight: 400;
-  letter-spacing: 0;
-  color: #696969;
-  margin-top: 15px;
-}
-@media screen and (max-width: 600px) {
-  .deals > p {
-    font-size: 16px;
-    margin: 15px auto 0 auto;
-    width: 90%;
-  }
-}
-.deals .container p {
-  display: block;
-  width: auto;
-  font-size: 24px;
-  font-weight: 600;
-  letter-spacing: 0.05px;
-  color: #000000;
-  margin-top: 7px;
-}
-
-.tips > p {
-  display: block;
-  width: auto;
-  font-size: 20px;
-  font-weight: 400;
-  letter-spacing: 0;
-  color: #696969;
-  margin-top: 15px;
-}
-@media screen and (max-width: 600px) {
-  .tips > p {
-    font-size: 16px;
-    margin: 15px auto 0 auto;
-    width: 90%;
-  }
-}
-.tips .container p {
-  display: block;
-  width: auto;
-  font-size: 24px;
-  font-weight: 700;
-  letter-spacing: 0.05px;
-  color: white;
-  margin-top: auto;
-  position: absolute;
-  left: 0;
-  right: 0;
-  margin: auto;
-  bottom: 22px;
-}
-@media screen and (max-width: 600px) {
-  .tips .container p {
-    font-size: 20px;
-  }
-}
-
-.message p {
-  display: block;
-  width: auto;
-  font-size: 20px;
-  font-weight: 500;
-  letter-spacing: 0;
-  color: white;
-  margin-top: 15px;
-}
-@media screen and (max-width: 600px) {
-  .message h4 {
-    font-size: 30px;
-  }
-  .message p {
+  .subtitle-1 {
     font-size: 16px;
     margin-top: 15px;
+  }
+}
+
+.subtitle-2 {
+  width: 100%;
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 1.12px;
+  color: #696969;
+  margin-top: 15px;
+  padding: 0 20px;
+}
+@media screen and (max-width: 820px) {
+  .subtitle-2 {
+    font-size: 16px;
+    width: 100%;
   }
 }
 
@@ -265,6 +209,31 @@ h4 {
   border-radius: 4px;
   padding: 10px 27px;
   width: 100%;
+}
+
+.car__name {
+  width: auto;
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: 0.05px;
+  color: #000000;
+  margin-top: 7px;
+  padding: 0 20px;
+}
+
+b {
+  width: auto;
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 0.05px;
+  color: white;
+  margin-top: auto;
+  padding: 0 20px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  bottom: 22px;
 }
 
 header {
@@ -461,19 +430,19 @@ footer .container nav a {
   align-items: center;
   margin-top: 50px;
 }
-.tips .tip-1 {
+.tips .tip:nth-child(1) {
   background: url("images/rectangle-1.png") no-repeat center;
   position: relative;
   width: 400px;
   height: 200px;
 }
-.tips .tip-2 {
+.tips .tip:nth-child(2) {
   background: url("images/rectangle-2.png") no-repeat center;
   position: relative;
   width: 400px;
   height: 200px;
 }
-.tips .tip-3 {
+.tips .tip:nth-child(3) {
   background: url("images/rectangle-3.png") no-repeat center;
   position: relative;
   width: 400px;
@@ -551,12 +520,12 @@ footer .container nav a {
   .tips .container p {
     font-size: 20px;
   }
-  .tips .container .tip-1,
-.tips .container .tip-2,
-.tips .container .tip-3 {
+  .tips .container .tip:nth-child(1),
+.tips .container .tip:nth-child(2),
+.tips .container .tip:nth-child(3) {
     background-size: cover;
   }
-  .tips .container .tip-2 {
+  .tips .container .tip:nth-child(2) {
     margin: 15px;
   }
 
@@ -582,7 +551,6 @@ footer .container nav a {
   .hero .hero__container form {
     margin-top: 0;
     width: 100%;
-    padding: 0 20px;
     display: flex;
     flex-direction: column;
   }
@@ -605,6 +573,7 @@ footer .container nav a {
   }
 
   .message form {
+    width: 100%;
     display: flex;
     flex-direction: column;
   }
@@ -622,9 +591,7 @@ footer .container nav a {
     grid-template-columns: 1fr;
   }
 
-  .tips .tip-1,
-.tips .tip-2,
-.tips .tip-3 {
+  .tips .container .tip {
     width: 100%;
   }
 }

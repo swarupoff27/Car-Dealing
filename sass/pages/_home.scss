@@ -25,7 +25,6 @@
                 @include input(142px,51px);
                 border-left:1px solid $secondary-color-5;
             }
-
         }
 
         img {
@@ -62,15 +61,15 @@
         margin-top: 50px;
     }
 
-    .tip-1 {
+    .tip:nth-child(1){
         @include tips('images/rectangle-1.png');
     }
 
-    .tip-2 {
+    .tip:nth-child(2){
         @include tips('images/rectangle-2.png');
     }
 
-    .tip-3 {
+    .tip:nth-child(3){
         @include tips('images/rectangle-3.png');
     }
 
@@ -116,23 +115,20 @@
 
     .tips {
         .container {
-
             p {
                 font-size: 20px;
             }
 
-            .tip-1,
-            .tip-2,
-            .tip-3 {
+            .tip:nth-child(1),
+            .tip:nth-child(2),
+            .tip:nth-child(3){
                 background-size: cover;
             }
 
-            .tip-2 {
+            .tip:nth-child(2) {
                 margin: 15px;
             }
-
         }
-
     }
 
 
@@ -140,7 +136,6 @@
         .container {
             padding: 0 30px;
         }
-
     }
 }
 
@@ -168,7 +163,6 @@
             form {
                 margin-top: 0;
                 width: 100%;
-                padding: 0 20px;
                 display: flex;
                 flex-direction: column;
 
@@ -187,7 +181,6 @@
                     border-top: 1px solid $secondary-color-5;
 
                 }
-
             }
 
             img {
@@ -195,12 +188,12 @@
                 width: 70vw;
                 margin-top: 5%;  
             }
-
         }
     }
 
     .message {
         form {
+            width: 100%;
             display: flex;
             flex-direction: column;
 
@@ -221,20 +214,19 @@
         }
     }
 
-
     .deals {
         .container {
             grid-template-columns: 1fr;
         }
     }
 
-
     .tips {
-        .tip-1,
-        .tip-2,
-        .tip-3 {
-            width: 100%;
+        .container{
+            .tip{
+                width: 100%;
+            }
         }
+        
     }
 
 }

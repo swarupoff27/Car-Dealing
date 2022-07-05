@@ -1,6 +1,19 @@
-@mixin tips($bg-img){
+@mixin tips($bg-img) {
     background: url($bg-img) no-repeat center;
     position: relative;
     width: 400px;
     height: 200px;
+}
+
+b {
+    @include paragraphs(auto, 24px, $bold, 0.05px, white, auto);
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    bottom: 22px;
+
+    @include bp(600) {
+        font-size: 20px;
+    }
 }

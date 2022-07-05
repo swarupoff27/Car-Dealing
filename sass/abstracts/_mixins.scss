@@ -9,3 +9,21 @@
         transition: all ease-in-out 0.2s;
     }
 }
+
+@mixin bp($point) {
+    @if $point == xl {
+        @media screen and (max-width: 1330px) {@content;}
+    }
+
+    @else if $point == lg {
+        @media screen and (max-width: 1100px) {@content;}
+    }
+
+    @else if $point == md {
+        @media screen and (max-width: 820px) {@content;}
+    }
+
+    @else if $point == sm {
+        @media screen and (max-width: 600px) {@content;}
+    }
+}
