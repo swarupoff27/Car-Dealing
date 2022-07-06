@@ -10,14 +10,12 @@
         cursor: pointer;
     }
 
-    @media screen and (max-width: 820px) {
+    @include breakpoint(md){
         margin: 15px auto 0 auto;
         font-size: 13px;
         height: 40px;
         padding: 0;
     }
-
-    
 }
 
 .btn-light {
@@ -37,7 +35,7 @@
         cursor: pointer;
     }
 
-    @media screen and (max-width: 800px) {
+    @include breakpoint(md){
         padding: 10px 15px;
     }
 }

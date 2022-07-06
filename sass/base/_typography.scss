@@ -14,12 +14,12 @@ strong {
 h1 {
     @include headings(54px, $s-bold, white, 0);
 
-    @include bp(md) {
+    @include breakpoint(md) {
         font-size: 35px;
         width: 90%;
     }
 
-    @include bp(sm) {
+    @include breakpoint(sm) {
         font-size: 28px;
     }
 }
@@ -27,7 +27,7 @@ h1 {
 h2 {
     @include headings(30px, $s-bold, $secondary-color-2, 0.06px);
 
-    @include bp(sm) {
+    @include breakpoint(sm) {
         font-size: 26px;
         margin: 0 auto;
         width: 90%;
@@ -37,7 +37,7 @@ h2 {
 h3 {
     @include headings(30px, $s-bold, $secondary-color-2, 0.06px);
 
-    @include bp(sm) {
+    @include breakpoint(sm) {
         font-size: 26px;
         margin: 0 auto;
         width: 90%;
@@ -47,7 +47,7 @@ h3 {
 h4 {
     @include headings(40px, $s-bold, white, 0.12);
 
-    @include bp(sm) {
+    @include breakpoint(sm) {
         font-size: 26px;
     }
 }
@@ -55,12 +55,12 @@ h4 {
 .subtitle-1 {
     @include paragraphs(655px, 20px, $med, 1.12px, white, 4px);
 
-    @include bp(md) {
+    @include breakpoint(md) {
         font-size: 18px;
         width: 100%;
     }
 
-    @include bp(sm) {
+    @include breakpoint(sm) {
         font-size: 16px;
         margin-top: 15px;
     }
@@ -69,7 +69,7 @@ h4 {
 .subtitle-2 {
     @include paragraphs(100%, 20px, $med, 1.12px, $secondary-color-3, 15px);
 
-    @include bp(md) {
+    @include breakpoint(md) {
         font-size: 16px;
         width: 100%;
     }

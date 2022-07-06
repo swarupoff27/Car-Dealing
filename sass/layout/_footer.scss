@@ -21,7 +21,7 @@ footer {
         }
     }
 
-    @include bp(sm){
+    @include breakpoint(sm){
         .container {
             flex-direction: column;
 
@@ -40,23 +40,4 @@ footer {
         }
     }
 
-    // @media screen and (max-width: 600px) {
-
-    //     .container {
-    //         flex-direction: column;
-
-    //         nav {
-    //             width: 95%;
-    //             display: flex;
-    //             justify-content: space-between;
-    //             margin-top: 30px;
-
-    //             a {
-    //                 margin: 0;
-    //                 font-size: 13px;
-    //             }
-           
-    //         }
-    //     }
-    // }
 }

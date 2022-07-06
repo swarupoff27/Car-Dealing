@@ -198,20 +198,19 @@ h4 {
 .btn-light:hover {
   cursor: pointer;
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 820px) {
   .btn-light {
     padding: 10px 15px;
   }
 }
 
-.cars {
+.deals .cars {
   background-color: rgba(227, 227, 227, 0.73);
   border-radius: 4px;
   padding: 10px 27px;
   width: 100%;
 }
-
-.car__name {
+.deals p {
   width: auto;
   font-size: 24px;
   font-weight: 600;
@@ -221,7 +220,7 @@ h4 {
   padding: 0 20px;
 }
 
-b {
+.tip p {
   width: auto;
   font-size: 24px;
   font-weight: 700;
@@ -234,6 +233,11 @@ b {
   right: 0;
   margin: auto;
   bottom: 22px;
+}
+@media screen and (max-width: 600px) {
+  .tip p {
+    font-size: 20px;
+  }
 }
 
 header {

@@ -10,7 +10,25 @@
     }
 }
 
-@mixin bp($point) {
+@mixin headings($font-size, $font-weight, $color, $letter-spacing) {
+    font-size: $font-size;
+    font-weight: $font-weight;
+    color: $color;
+    letter-spacing: $letter-spacing;
+    padding:0 20px;
+}
+
+@mixin paragraphs($width,$font-size,$font-weight,$letter-spacing,$color,$margin-top) {
+    width: $width;
+    font-size: $font-size;
+    font-weight: $font-weight;
+    letter-spacing: $letter-spacing;
+    color: $color;
+    margin-top: $margin-top;
+    padding: 0 20px;
+}
+
+@mixin breakpoint($point) {
     @if $point == xl {
         @media screen and (max-width: 1330px) {@content;}
     }
